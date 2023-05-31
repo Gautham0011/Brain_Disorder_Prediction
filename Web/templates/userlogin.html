@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAIN DISORDER PREDICTION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <script src="https://kit.fontawesome.com/7947083dcd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/main_login.css">
+  </head>
+
+  
+<body>
+
+
+<script>
+
+  function validate() {
+
+    var x = document.forms["upload"]["file"].value;
+
+    if (x == "") {
+
+      alert("No File provided");
+
+      return false;
+
+    }
+
+  }
+
+
+
+</script>
+
+
+
+
+    <div id="bg">
+    </div>
+    <h2>BRAIN DISORDER PREDICTION</h2>
+    <div class="container" id="container">
+      <!-- ~~~~~~~~~~~~~~~~~~~~Signup container~~~~~~~~~~~~~~~~~~~~~ -->
+      <div class="form-container sign-up-container">
+        <form action = /add_User method = 'GET'>
+          <h1>Sign Up</h1>
+          <input type="number" placeholder="User ID" name = "User_ID"/>        
+          <input type="text" pattern="[A-Za-z]+" placeholder="Name" name = "Name"/>        
+          <input type="dob" placeholder="Date of Birth" name = "Date_of_Birth"/>
+          <input type="number" pattern="[0-1]" placeholder="Medical Insurance" name = "Medical_insurance"/>
+          <input type="medicalhis" pattern="[A-Za-z]+" placeholder="Medical History" name = "Medical_history"/>  
+          <input type="street" placeholder="Street" name = "Street"/>  
+          <input type="city" pattern="[A-Za-z]+" placeholder="City" name = "City"/>         
+          <input type="state" pattern="[A-Za-z]+" placeholder="State" name = "State"/>
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <!-- ****************SIgnIn Container************************* -->
+      <div class="form-container sign-in-container">
+        <form  action = "/option" method = "POST" onsubmit= "return validate()" enctype = "multipart/form-data">
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <div class="textbox">
+            
+            <input type="text" name='name' placeholder="Name">
+          </div>
+          <div class="textbox">
+            
+            <input type="email" name="email" placeholder="Email">
+          </div>
+          
+          <div class="textbox">
+           
+            <input type="Phone" name="phone"placeholder="Phone" >
+          </div>
+          <div class="addfile">
+            <div class="form-row justify-content-center mt-4 mb-4">
+              <input type="file" id="myFile" name="file">
+            </div>
+          </div>
+          <a href="#">Forgot your password?</a>
+         
+          <button>Sign In</button>
+        </form>
+      </div>
+      
+
+
+      <!-- ~~~~~~~~~~~~~~OverLay~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <!--<h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>-->
+            <video id="myVideo" style="width: 100%; height: 100%;" autoplay loop muted>
+              <source src="/static/dashboardep/images/red_brain.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
+            <script>
+              var video = document.querySelector('video');
+              video.addEventListener('click', function () {
+                video.play();
+              }, false);
+            </script>
+            <button style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);" class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <!--<h1>New Here?</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>-->
+            <video id="myVideo" style="width: 100%; height: 100%;" autoplay loop muted>
+              <source src="/static/dashboardep/images/red_brain.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
+            <script>
+              var video = document.querySelector('video');
+              video.addEventListener('click', function () {
+                video.play();
+              }, false);
+            </script>
+            <button style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);" class="ghost" id="signUp">signUp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="static\1_login.js"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script>function bs_input_file() {
+    $(".input-file").before(
+      function () {
+        if (!$(this).prev().hasClass('input-ghost')) {
+          var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+          element.attr("name", $(this).attr("name"));
+          element.change(function () {
+            element.next(element).find('input').val((element.val()).split('\\').pop());
+          });
+          $(this).find("button.btn-choose").click(function () {
+            element.click();
+          });
+          $(this).find("button.btn-reset").click(function () {
+            element.val(null);
+            $(this).parents(".input-file").find('input').val('');
+          });
+          $(this).find('input').css("cursor", "pointer");
+          $(this).find('input').mousedown(function () {
+            $(this).parents('.input-file').prev().click();
+            return false;
+          });
+          return element;
+        }
+      }
+    );
+  }
+  $(function () {
+    bs_input_file();
+  });</script>
+
+  </body>
+</html>

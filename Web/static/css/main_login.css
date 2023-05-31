@@ -1,0 +1,17 @@
+
+#bg{
+ 
+    -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    background: #ff002bc5;
+    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+}
+
+
+
+  

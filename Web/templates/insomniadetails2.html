@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BRAIN DISORDER PREDICTION</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="/static/dashboardep/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/static/dashboardep/vendors/feather/feather.css">
+    <link rel="stylesheet" href="/static/dashboardep/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="/static/dashboardep/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="/static/dashboardep/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/static/dashboardep/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="/static/dashboardep/images/favicon.png" />
+
+    <style>
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size:1.25rem
+        }
+    
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+    
+        .col {
+            flex: ;
+            padding: 0 10px;
+        }
+    
+        img {
+            float: left;
+            margin-left: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-titleinsomnia">Insomnia Additional details</h4>
+                <div class="card-selectoptions">
+                    Select the following options
+                </div>
+                <form form action='/insomniadet' method="post" class="col s12">
+                    <div class="row">
+                        <div class="col">
+                            <label for="alcohol">Alcohol:</label>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="alcohol" id="alcohol_yes" value="alcohol">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="alcohol" id="alcohol_no" value="no" checked>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="/static/dashboardep/images/alcohol1.jpg" alt="Alcohol" height="100">
+                        </div>
+                        <div class="col">
+                            <label for="stress">Stress:</label>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="stress" id="stress_yes" value="stress">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="stress" id="stress_no" value="no" checked>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="/static/dashboardep/images/stress.jpg" alt="Stress" height="100" >
+                        </div>
+                    
+
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="sleep-pills">Sleep Pills:</label>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="sleep" id="sleep_yes" value="sleep pills">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="sleep" id="sleep_no" value="no" checked>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="/static/dashboardep/images/sleep.jpg" alt="Sleep Pills" height="100">
+                        </div>
+                    
+                        <div class="col">
+                            <label for="coffee">Coffee:</label>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="coffee" id="coffee_yes" value="coffee">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="coffee" id="coffee_no" value="no" checked>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="/static/dashboardep/images/coffee.jpg" alt="Coffee" height="100">
+                        </div>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="/static/dashboardep/vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/static/dashboardep/js/off-canvas.js"></script>
+    <script src="/static/dashboardep/js/hoverable-collapse.js"></script>
+    <script src="/static/dashboardep/js/template.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="/static/dashboardep/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="/static/dashboardep/vendors/select2/select2.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="/static/dashboardep/js/file-upload.js"></script>
+    <script src="/static/dashboardep/js/typeahead.js"></script>
+    <script src="/static/dashboardep/js/select2.js"></script>
+    <!-- End custom js for this page-->
+</body>
+
+</html>
